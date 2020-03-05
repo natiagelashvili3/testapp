@@ -1,5 +1,6 @@
 import Home from "./components/Home";
 import About from "./components/About";
+import Blog from "./components/Blog";
 
 export default {
     mode: 'history',
@@ -12,6 +13,11 @@ export default {
         {
             path: '/about',
             component: About
+        },
+
+        {
+            path: '/blogs',
+            component: Blog
         }
     ]
 }

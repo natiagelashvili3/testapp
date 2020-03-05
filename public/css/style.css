@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.article-card-top{
+    height: 150px;
+    background-color: #222f3e;
+    color: white;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 18px;
+}

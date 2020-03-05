@@ -32,15 +32,8 @@
 
                     <li class="menu-title">Modules</li>
 
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-angle-double-right"></i>Attributes</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-angle-double-right"></i><a href="font-fontawesome.html">Categories</a></li>
-                            <li><i class="menu-icon fa fa-angle-double-right"></i><a href="font-themify.html">Sizes</a></li>
-                        </ul>
-                    </li>
                     <li class="menu-item">
-                        <a href="#" class=""><i class="menu-icon fa fa-angle-double-right"></i>Products</a>
+                        <a href="{{ route('admin.blog.index')  }}" class=""><i class="menu-icon fa fa-angle-double-right"></i>Blogs</a>
                     </li>
 
                 </ul>

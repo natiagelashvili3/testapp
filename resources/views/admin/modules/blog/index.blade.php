@@ -1,8 +1,8 @@
 @extends('admin.layout')
 
 @section('content')
-    <div class="col-lg-12">
-        <a class="btn btn-primary" href="{{ route('admin.blog.create') }}">Add</a>
+    <div class="col-lg-12 text-right">
+        <a class="btn btn-primary" style="margin-bottom: 20px;" href="{{ route('admin.blog.create') }}">Add</a>
     </div>
     <div class="col-lg-12">
         <div class="card">

@@ -8,14 +8,14 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     </head>
     <body>
-        <div id="app">
-            <router-view></router-view>
 
-            <router-link to="/">Home</router-link>
-            <router-link to="/about">About</router-link>
+        <div id="app">
+
         </div>
 
         <script src="{{ asset("js/app.js")  }}"></script>
