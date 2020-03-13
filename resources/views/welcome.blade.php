@@ -13,7 +13,55 @@
 
     </head>
     <body>
+    <form method="POST" action="" class="form-contact">
+        @csrf
+        <div class="form-row">
+            <div class="form-col">
+                <label for="field-name" class="form-label">Full Name*</label>
 
+                <input type="text" class="field{{ $errors->has('name') ? ' error' : '' }}" name="name" id="field-name" value="{{ old('name') }}" autofocus>
+
+                @if ($errors->has('name'))
+                    <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('name') }}</strong>
+                                </span>
+                @endif
+            </div><!-- /.form-col -->
+
+            <div class="form-col">
+                <label for="field-organization" class="form-label">Organization</label>
+
+                <input type="text" class="field{{ $errors->has('organization') ? ' error' : '' }}" name="organization" id="field-organization" value="{{ old('organization') }}" autofocus>
+
+                @if ($errors->has('organization'))
+                    <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('organization') }}</strong>
+                                </span>
+                @endif
+            </div><!-- /.form-col -->
+        </div><!-- /.form-row -->
+
+
+        <div class="form-row">
+            <div class="g-recaptcha" data-sitekey="{{ env("CAPTCHA_SITE_KEY") }}"></div>
+            @if($errors->has('g-recaptcha-response'))
+                <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                            </span>
+            @endif
+        </div>
+
+        <div class="form-row form-actions">
+            @if (session('success'))
+                <div class="success-message">
+                    <h2>Success!</h2>
+                    <p>{{ session('success') }}</p>
+                </div>
+            @endif
+
+            <input type="submit" value="Send" class="form-btn">
+        </div><!-- /.form-row form-actions -->
+    </form>
         <div id="app">
 
         </div>
